@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private static int DEFAULT_THEME = CURRENT_THEME;
 
     // TODO: Criar os receivers para tratar a mudança do tema
-    BroadcastReceiver batteryReceiver = new BatteryReceiver(){
+    BroadcastReceiver batteryReceiver = new BroadcastReceiver(){
         @Override
         public void onReceive(Context context, Intent intent) {
             switchActivityTheme(LOW_THEME);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    BroadcastReceiver batteryOkay = new BatteryReceiver(){
+    BroadcastReceiver batteryOkay = new BroadcastReceiver(){
         @Override
         public void onReceive(Context context, Intent intent){
             switchActivityTheme(DEFAULT_THEME);
